@@ -1,21 +1,14 @@
 #include <stdio.h>
 
-int main()
-{
-    int a[5];
-    int count=0;
-    for(int i=0; i<5; i++)
-    {
-        scanf("%d",&a[i]);
-    }
+int main() {
 
-    for(int j=0; j<5; j++)
-    {
-        if(a[j]<60)
-        {
-            printf("%d \n", a[j]);
-            count++;
-        }
-    }
-    printf("%d",count);
+    char a=(char)0x80;
+    unsigned char b= (unsigned char) 0x80;
+
+    if(a==b)
+        printf("same");
+    else
+        printf("not same");
+
+	return 0;
 }
