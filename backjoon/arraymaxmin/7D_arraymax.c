@@ -1,5 +1,5 @@
 //
-// 7주차 C언어 퀴즈
+// 7주차 C언어 퀴즈 quest 7th
 //열별 최댓값 정복하기
 // NxN 정수 배열에서 각 행과 각 열의 합을 계산하여, 합이 가장 큰 행과 열의 인덱스를 출력
 //
@@ -14,7 +14,7 @@ int main() {
     int max_col_index=0;
 
     int row_maxval= row_sums[0];
-    int col_maxval=col_sums[0];
+    int col_maxval= col_sums[0];
 
     scanf("%d", &N);
     for (int i=0; i<N; i++) {
