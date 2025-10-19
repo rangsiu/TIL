@@ -1,8 +1,9 @@
 //
-// Created by 황시우 on 25. 10. 19
+// 중간고사 대비, 비트 처리 방법 7week quiz
+//bit
+//https://velog.io/@jdohun/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-BitSet
 //
-//출력: X형식
-//
+
 
 #include <stdio.h>
 

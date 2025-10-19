@@ -1,6 +1,7 @@
 //
 // Created by 황시우 on 25. 10. 19..
-//
+// 2차원 배열을 다른 형태의 배열로 복사하는 알고리즘,
+// 18번 줄캐스팅이 매우 중요.
 #include <stdio.h>
 int main() {
     unsigned int A[3][4];
