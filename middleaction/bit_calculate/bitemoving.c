@@ -2,16 +2,19 @@
 // Created by 황시우 on 25. 10. 19..
 // 54 32 10 FF 거꾸로 배열하기!! 쉽네
 //printf("%02X ",(N>>8*i)&0x000000FF );를 printf("%02hhX", (N>>8*i)); 로 해도 동일.
-//why 96점인지 모르겠음.
+//why 96점인지 모르겠음. -> 출력 형식 땜시
+
+
 
 
 #include <stdio.h>
 int main() {
-    unsigned int N, swapped;
+    unsigned int N;
     scanf("%X", &N);
 
-    for (int i=0; i<=24; i+=8) {
-        swapped |= ((N>>i)&0xFF)<<(24-i);
-    }
-    printf("%08X\n", swapped);
+    unsigned int swapped= ((N>>24)&0x000000FF)|
+           ((N>>8)&0xFF00)|
+               ((N<<8)&0xFF000000)|
+                   ((N<<24)&0xFF000000);
+    printf("%X\n", swapped); //에라이 08X 써서 그런 거네 이런 썅
 }

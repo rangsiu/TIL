@@ -1,0 +1,29 @@
+//
+// Created by 황시우 on 25. 10. 19..
+//
+#include <stdio.h>
+int main() {
+    unsigned int A[3][4];
+    unsigned int output_arr[5][6] = {0};
+
+    for (int i=0; i<3; i++) {
+        for (int j=0; j<4; j++) {
+            scanf("%u", &A[i][j]);
+        }
+    }
+    //data copy
+for (int k=0; k<12; k++) { //12로 수정
+    int i=k / 6; //6이어야 함.
+    int j=k % 6;
+    output_arr[i][j]=*((unsigned int*)A + k);
+}
+
+
+
+    for (int i=0; i<5; i++) {
+        for (int j=0; j<6; j++) {
+            printf("%u ",output_arr[i][j]);
+        }
+        printf("\n");
+    }
+}
