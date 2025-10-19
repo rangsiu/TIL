@@ -7,12 +7,11 @@
 
 #include <stdio.h>
 int main() {
-    long long N;
+    unsigned int N, swapped;
     scanf("%X", &N);
 
-unsigned int swapped= ((N>>24)&0x000000FF)|
-       ((N>>8)&0xFF00)|
-           ((N<<8)&0xFF000000)|
-               ((N<<24)&0xFF000000);
+    for (int i=0; i<=24; i+=8) {
+        swapped |= ((N>>i)&0xFF)<<(24-i);
+    }
     printf("%08X\n", swapped);
 }
