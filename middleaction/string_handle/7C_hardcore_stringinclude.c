@@ -16,7 +16,7 @@ int main() {
     scanf("%s", a);
 
 
-    scanf("%s", b);
+    scanf("%s", b);//공백 없는 문자열 저장
 
     // 문자열 A를 순회
     while (a[i] != '\0') {
