@@ -1,5 +1,5 @@
 #include <stdio.h>
-int strlen(const char *str) {
+int my_strlen(const char *str) {
     int len = 0;
     while(str[len] != '\0') {
         len++;
@@ -17,7 +17,7 @@ int in_range(int x, int y) {
 }
 
 int find_word(char board[N][N + 1], char *word, int x, int y, int dir) {
-    int len = strlen(word);
+    int len = my_strlen(word);
     for (int i = 0; i < len; i++) {
         int nx = x + dx[dir] * i;
         int ny = y + dy[dir] * i;
@@ -27,6 +27,8 @@ int find_word(char board[N][N + 1], char *word, int x, int y, int dir) {
     return 1;
 }
 
+
+
 int main() {
     char board[N][N + 1];
     char word[11];
@@ -35,23 +37,26 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            scanf(" %c", &board[i][j]);  // 공백 무시하고 한 글자씩 입력받기
+            // 공백을 무시하고 100번의 문자를 읽습니다.
+            scanf(" %c", &board[i][j]);
         }
-        board[i][N] = '\0'; // 문자열 끝에 널 추가
+        // 문자열로 사용할 준비
+        board[i][N] = '\0';
     }
-    scanf("%s", word);
+    //단어 입력
+        scanf("%10s", word);
 
-    // 탐색
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
-            for (int d = 0; d < 8; d++) {
-                if (find_word(board, word, i, j, d)) {
-                    printf("%d %d\n", i, j);
-                    return 0;
+        // 탐색
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                for (int d = 0; d < 8; d++) {//보드 반복문에서 구하는 것
+                    if (find_word(board, word, i, j, d)) {
+                        printf("%d %d\n", i, j);
+                        return 0;
+                    }
                 }
             }
         }
+        printf("!\n");
+        return 0;
     }
-    printf("!\n");
-    return 0;
-}
