@@ -6,11 +6,11 @@ int my_strcmp(const char *str1, const char *str2) {
     const unsigned char *p1 = (const unsigned char *)str1;
     const unsigned char *p2 = (const unsigned char *)str2;
 
-    // 두 포인터가 가리키는 값이 다를 때 또는 널 문자에 도달했을 때 루프를 종료.
-    while (*p1 != '\0' && *p1 == *p2) {
+    // 두 포인터가 가리키는 값이 다를 때 또는 널 문자에 도달했을 때 루프를 종료. 이게 문제였을지도 몰라. 여기서 엣지포인트가 막힌거지
+   /* while (*p1 != '\0' && *p1 == *p2) {
         p1++;
         p2++;
-    }
+    }*/
 
     // 최종적으로 두 문자의 차이를 정수형으로 반환
 

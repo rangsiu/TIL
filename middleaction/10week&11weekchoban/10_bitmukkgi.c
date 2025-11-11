@@ -40,7 +40,7 @@ for (int i=0; i<unit; i++) {
 
 
     for (int i=0; i<B_idx; i++) {
-        unsigned int value=(unsigned int)B[B_idx];
+        unsigned int value=(unsigned int)B[i];//B[i]쓰기
         int count=0;
         while (value) {
 

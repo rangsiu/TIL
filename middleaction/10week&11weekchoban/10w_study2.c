@@ -3,7 +3,7 @@
 
 //bubble sort
 #include <stdio.h>
-#include <string.h>
+#include <string.h>//string을 활용한 버전
 
 typedef struct {
     char name[51];//문자열의 길이 50 이내
