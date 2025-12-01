@@ -3,7 +3,7 @@
 //문자열을 중심으로 사용법과 주의점 학습'
 //배열과 포인터 변수의 이해
 #include <stdio.h>
-
+//9week swap mission 내용 담아내기.
 void swap(int *p, int *q) {
     int tmp;//local
     tmp=*p;//좌변 변수 우변 포인터 값

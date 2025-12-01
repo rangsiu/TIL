@@ -50,10 +50,15 @@ void funcA(int *left, int *right) {
 
 // 이 아래로 수정 금지
 
-int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])//main 함수를 부를때 캐릭터 포인터를 담은 배열.
+//포인터들로 이루어진 배열.
+//너 이런 일을 하라고 명령하는 argv 배열
+//argv는 문자열. main의 파라미터 변수들이니까, 외부로부터 받은 값이니까 임의로 바꾸면 안되는 거야.
+
 {
     int A, B;
     scanf("%d %d", &A, &B);
+
 
     printf("%d %d\n", A, B);
     funcA(&A, &B);

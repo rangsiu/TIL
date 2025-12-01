@@ -1,5 +1,5 @@
 //버블 정렬 등의 학습
-
+//스터디 2주차 버블 정렬 확실히 써먹기
 
 //bubble sort
 #include <stdio.h>

@@ -4,22 +4,27 @@
 int my_strcmp(char *str1, char *str2) {
     //포인터 정의
     unsigned char *p1=(unsigned char*)str1;//왜 별을 붙이는지 이해하기
+    //같은 포인터이기 떄문이다. str1도 포인터.
     unsigned char *p2=(unsigned char*)str2;
 
     while (*p1 != 0 && *p2 != 0) {
         if (*p1 != *p2) {
+            //개선: null이 될때까지 반복했었는데 여기서는 다르면 즉시 반환.
+            //엣지포인트 ABYZ를 해결한 주요 포인트.
             return (int)*p1 - (int)*p2;
-        }//개선: null이 될때까지 반복했었는데 여기서는 다르면 즉시 반환.
-        //엣지포인트 ABYZ를 해결한 주요 포인트.
+        }
         p1++;
         p2++;
     }
-    //어 여기 수정하니까 ZYBA가 되네
+
+    //wrong: 어 여기 수정하니까 ZYBA가 되네
     /*while ((*p1!=0) && (*p2!=0)) {
         p1++;
         p2++;
     }*/
+
     return (int)*p1-(int)*p2;//왜 여기에는 별을 안 붙이는지 이해하기
+
 }
 
 void my_swap(char **a, char **b) {//call by reference를 위한 이중 포인터 사용 반드시 기억
