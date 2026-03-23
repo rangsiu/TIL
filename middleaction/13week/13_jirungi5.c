@@ -10,7 +10,7 @@ void pin_worm(int *map, int **worm, int ***head_tail)
     int *p1;
     // 이 위로 수정 금지
     head_tail[0] = &worm[0];//add
-    head_tail[1] = &worm[11];//add &worm[10]이 아니라 11을 넣어야 하네!!
+    head_tail[1] = &worm[11];//add &worm[10]이 아니라 11을 넣어야 하네!! worm의 주소값 할당.
     p1=map;
 
     //꼬리 찾기
@@ -24,7 +24,7 @@ void pin_worm(int *map, int **worm, int ***head_tail)
             }
             worm++;
         }
-        p1+=11;//대각선 다음!
+        p1++;
     }
 
    //super add-> super byungsin
